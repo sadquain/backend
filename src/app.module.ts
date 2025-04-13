@@ -7,12 +7,8 @@ import { CandidatesModule } from './candidates/candidates.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'synapse',
-      port: 5432,
-      username: 'postgres',
-      password: 'postgres', // Replace with your password
-      database: 'synapse',
-      entities: [__dirname + '/**/*.entity{.ts,.js}'],
+      url: process.env.DATABASE_URL,
+      autoLoadEntities: true,
       synchronize: false,
     }),
     JobsModule,
