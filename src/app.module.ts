@@ -7,7 +7,7 @@ import { CandidatesModule } from './candidates/candidates.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
+      host: 'synapse',
       port: 5432,
       username: 'postgres',
       password: 'postgres', // Replace with your password
